@@ -1,6 +1,7 @@
 package com.example.test
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -13,6 +14,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         isButtonValid()
+        goNextPage()
     }
     @SuppressLint("ResourceAsColor")
     fun isButtonValid(){
@@ -31,6 +33,13 @@ class MainActivity : AppCompatActivity() {
             }
 
         }
-
+    }
+    fun goNextPage(){
+        val button = findViewById<Button>(R.id.nextButton)
+        button.setOnClickListener{
+            val intent = Intent(this, CarSelectActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
     }
 }
