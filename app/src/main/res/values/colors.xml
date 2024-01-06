@@ -1,5 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="black">#FF000000</color>
+    <color name="backgroundColor">#FF000000</color>
+
     <color name="white">#FFFFFFFF</color>
+
+    <color name="main">#C2FF41</color>
+
+    <color name="alert">#FF4C4C</color>
+
+    <color name="gray0">#F6F6F6</color>
+    <color name="gray10">#EFF2F5</color>
+    <color name="gray20">#DDE3EA</color>
+    <color name="gray30">#B2B7BD</color>
+    <color name="gray50">#898F96</color>
+    <color name="gray70">#515458</color>
+    <color name="gray80">#2A2C2F</color>
+    <color name="gray90">#161719</color>
 </resources>
