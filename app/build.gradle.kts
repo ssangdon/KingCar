@@ -4,20 +4,17 @@ plugins {
 }
 
 android {
-    namespace = "com.example.kingcar"
+    namespace = "com.example.test"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.kingcar"
+        applicationId = "com.example.test"
         minSdk = 24
         targetSdk = 33
         versionCode = 1
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-    }
-    buildFeatures{
-        viewBinding = true
     }
 
     buildTypes {

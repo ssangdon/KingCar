@@ -1,12 +1,11 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.KingCar" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Base.Theme.Test" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 
-    <style name="Theme.KingCar" parent="Theme.AppCompat.DayNight.DarkActionBar" >
-        <item name="android:windowBackground">@color/backgroundColor</item>
+    <style name="Theme.Test" parent="Base.Theme.Test" >
+        <item name="android:windowBackground">#161719</item>
     </style>
-<!--    <style name="AppTheme" parent="Theme.AppCompat.DayNight.DarkActionBar">-->
 </resources>

@@ -1,46 +1,36 @@
-package com.example.kingcar
+package com.example.test
 
+import android.annotation.SuppressLint
 import android.graphics.Color
-import android.opengl.EGLImage
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.EditText
 import android.widget.Button
-import android.widget.Toast
+import android.widget.EditText
 import androidx.core.widget.addTextChangedListener
-import com.example.kingcar.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-    private var binding: ActivityMainBinding? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding?.root)
-
-        binding?.nicknameTextfield?.setText("초기값")
+        setContentView(R.layout.activity_main)
         isButtonValid()
     }
-
+    @SuppressLint("ResourceAsColor")
     fun isButtonValid(){
         val button = findViewById<Button>(R.id.nextButton)
-        val textField = findViewById<EditText>(R.id.nickname_textfield)
+        val textField = findViewById<EditText>(R.id.nickNameTextField)
         textField.addTextChangedListener{
-            val nickName = findViewById<EditText>(R.id.nickname_textfield).text.toString()
-            if(nickName.isEmpty()){
+            val nickname = textField.text.toString()
+//            닉네임 중복검사 로직 필요
+            if(nickname.isEmpty()){
+                button.setBackgroundColor(Color.parseColor("#898F96"))
                 button.isEnabled = false
-                button.setBackgroundColor(Color.BLUE)
+
             }else{
+                button.setBackgroundColor(Color.parseColor("#C2FF41"))
                 button.isEnabled = true
-                button.setBackgroundColor(Color.BLACK)
             }
 
         }
-        button.setOnClickListener{
-            val nickName = findViewById<EditText>(R.id.nickname_textfield).text.toString()
-                Toast.makeText(this@MainActivity,"닉네임을 입력해주세요",Toast.LENGTH_SHORT).show()
 
-//            Toast.makeText(this@MainActivity,nickName,Toast.LENGTH_SHORT).show()
-        }
     }
-
 }
