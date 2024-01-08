@@ -36,8 +36,10 @@ class MainActivity : AppCompatActivity() {
     }
     fun goNextPage(){
         val button = findViewById<Button>(R.id.nextButton)
+        val textField = findViewById<EditText>(R.id.nickNameTextField)
         button.setOnClickListener{
             val intent = Intent(this, CarSelectActivity::class.java)
+            intent.putExtra("nickname", textField.text.toString())
             startActivity(intent)
         }
     }

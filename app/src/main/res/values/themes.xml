@@ -7,5 +7,6 @@
 
     <style name="Theme.Test" parent="Base.Theme.Test" >
         <item name="android:windowBackground">#161719</item>
+        <item name="android:statusBarColor">#161719</item>
     </style>
 </resources>

@@ -14,21 +14,21 @@ class CarSelectActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_car_select)
-        var boolArray: BooleanArray = BooleanArray(6)
+        var isSelected:Int =0
         val btn1 =findViewById<LinearLayout>(R.id.LinearLayoutButton1)
         val btn2 =findViewById<LinearLayout>(R.id.LinearLayoutButton2)
         val btn3 =findViewById<LinearLayout>(R.id.LinearLayoutButton3)
         val btn4 =findViewById<LinearLayout>(R.id.LinearLayoutButton4)
         val btn5 =findViewById<LinearLayout>(R.id.LinearLayoutButton5)
         val btn6 =findViewById<LinearLayout>(R.id.LinearLayoutButton6)
-        btn1.setOnClickListener{ onLinearLayoutClick(btn1, boolArray) }
-        btn2.setOnClickListener{ onLinearLayoutClick(btn2, boolArray) }
-        btn3.setOnClickListener{ onLinearLayoutClick(btn3, boolArray) }
-        btn4.setOnClickListener{ onLinearLayoutClick(btn4, boolArray) }
-        btn5.setOnClickListener{ onLinearLayoutClick(btn5,boolArray) }
-        btn6.setOnClickListener{ onLinearLayoutClick(btn6,boolArray) }
+        btn1.setOnClickListener{ onLinearLayoutClick(btn1, isSelected) }
+        btn2.setOnClickListener{ onLinearLayoutClick(btn2, isSelected) }
+        btn3.setOnClickListener{ onLinearLayoutClick(btn3, isSelected) }
+        btn4.setOnClickListener{ onLinearLayoutClick(btn4, isSelected) }
+        btn5.setOnClickListener{ onLinearLayoutClick(btn5, isSelected) }
+        btn6.setOnClickListener{ onLinearLayoutClick(btn6, isSelected) }
     }
-    fun onLinearLayoutClick(linearLayout: LinearLayout, isClicked: BooleanArray) {
+    fun onLinearLayoutClick(linearLayout: LinearLayout, isSelected: Int) {
         val text1 = findViewById<TextView>(R.id.text1)
         val text2 = findViewById<TextView>(R.id.text2)
         val text3 = findViewById<TextView>(R.id.text3)
@@ -55,13 +55,6 @@ class CarSelectActivity : AppCompatActivity() {
                 linearLayout4.setBackgroundResource(R.drawable.rounded_corner_box)
                 linearLayout5.setBackgroundResource(R.drawable.rounded_corner_box)
                 linearLayout6.setBackgroundResource(R.drawable.rounded_corner_box)
-
-                isClicked[0] = true;
-                isClicked[1] = false;
-                isClicked[2] = false;
-                isClicked[3] = false;
-                isClicked[4] = false;
-                isClicked[5] = false;
             }
             R.id.LinearLayoutButton2 -> {
                 text1.setTextColor(Color.parseColor("#ffffff"))
@@ -76,12 +69,7 @@ class CarSelectActivity : AppCompatActivity() {
                 linearLayout4.setBackgroundResource(R.drawable.rounded_corner_box)
                 linearLayout5.setBackgroundResource(R.drawable.rounded_corner_box)
                 linearLayout6.setBackgroundResource(R.drawable.rounded_corner_box)
-                isClicked[0] = false;
-                isClicked[1] = true;
-                isClicked[2] = false;
-                isClicked[3] = false;
-                isClicked[4] = false;
-                isClicked[5] = false;
+
             }
             R.id.LinearLayoutButton3 -> {
                 text1.setTextColor(Color.parseColor("#ffffff"))
@@ -96,12 +84,7 @@ class CarSelectActivity : AppCompatActivity() {
                 linearLayout4.setBackgroundResource(R.drawable.rounded_corner_box)
                 linearLayout5.setBackgroundResource(R.drawable.rounded_corner_box)
                 linearLayout6.setBackgroundResource(R.drawable.rounded_corner_box)
-                isClicked[0] = false;
-                isClicked[1] = false;
-                isClicked[2] = true;
-                isClicked[3] = false;
-                isClicked[4] = false;
-                isClicked[5] = false;
+
             }
             R.id.LinearLayoutButton4 -> {
                 text1.setTextColor(Color.parseColor("#ffffff"))
@@ -116,12 +99,7 @@ class CarSelectActivity : AppCompatActivity() {
                 linearLayout4.setBackgroundResource(R.drawable.rounded_corner_box_selected)
                 linearLayout5.setBackgroundResource(R.drawable.rounded_corner_box)
                 linearLayout6.setBackgroundResource(R.drawable.rounded_corner_box)
-                isClicked[0] = false;
-                isClicked[1] = false;
-                isClicked[2] = false;
-                isClicked[3] = true;
-                isClicked[4] = false;
-                isClicked[5] = false;
+
             }
             R.id.LinearLayoutButton5 -> {
                 text1.setTextColor(Color.parseColor("#ffffff"))
@@ -136,12 +114,7 @@ class CarSelectActivity : AppCompatActivity() {
                 linearLayout4.setBackgroundResource(R.drawable.rounded_corner_box)
                 linearLayout5.setBackgroundResource(R.drawable.rounded_corner_box_selected)
                 linearLayout6.setBackgroundResource(R.drawable.rounded_corner_box)
-                isClicked[0] = false;
-                isClicked[1] = false;
-                isClicked[2] = false;
-                isClicked[3] = false;
-                isClicked[4] = true;
-                isClicked[5] = false;
+
             }
             R.id.LinearLayoutButton6 -> {
                 text1.setTextColor(Color.parseColor("#ffffff"))
@@ -156,12 +129,7 @@ class CarSelectActivity : AppCompatActivity() {
                 linearLayout4.setBackgroundResource(R.drawable.rounded_corner_box)
                 linearLayout5.setBackgroundResource(R.drawable.rounded_corner_box)
                 linearLayout6.setBackgroundResource(R.drawable.rounded_corner_box_selected)
-                isClicked[0] = false;
-                isClicked[1] = false;
-                isClicked[2] = false;
-                isClicked[3] = false;
-                isClicked[4] = false;
-                isClicked[5] = true;
+
             }
         }
     }
