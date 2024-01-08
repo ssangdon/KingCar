@@ -62,7 +62,6 @@
             android:text="@string/next"
             android:enabled="false"
             />
-
     </LinearLayout>
 
 

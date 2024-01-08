@@ -1,34 +1,35 @@
-package com.example.test
+package com.example.kingcar
 
 import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.TextView
-import android.widget.Toast
+import com.example.test.R
 
 class CarSelectActivity : AppCompatActivity() {
+    private var isSelected:Int = 0;
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_car_select)
-        var isSelected:Int =0
+
         val btn1 =findViewById<LinearLayout>(R.id.LinearLayoutButton1)
         val btn2 =findViewById<LinearLayout>(R.id.LinearLayoutButton2)
         val btn3 =findViewById<LinearLayout>(R.id.LinearLayoutButton3)
         val btn4 =findViewById<LinearLayout>(R.id.LinearLayoutButton4)
         val btn5 =findViewById<LinearLayout>(R.id.LinearLayoutButton5)
         val btn6 =findViewById<LinearLayout>(R.id.LinearLayoutButton6)
-        btn1.setOnClickListener{ onLinearLayoutClick(btn1, isSelected) }
-        btn2.setOnClickListener{ onLinearLayoutClick(btn2, isSelected) }
-        btn3.setOnClickListener{ onLinearLayoutClick(btn3, isSelected) }
-        btn4.setOnClickListener{ onLinearLayoutClick(btn4, isSelected) }
-        btn5.setOnClickListener{ onLinearLayoutClick(btn5, isSelected) }
-        btn6.setOnClickListener{ onLinearLayoutClick(btn6, isSelected) }
+        btn1.setOnClickListener{ onLinearLayoutClick(btn1) }
+        btn2.setOnClickListener{ onLinearLayoutClick(btn2) }
+        btn3.setOnClickListener{ onLinearLayoutClick(btn3) }
+        btn4.setOnClickListener{ onLinearLayoutClick(btn4) }
+        btn5.setOnClickListener{ onLinearLayoutClick(btn5) }
+        btn6.setOnClickListener{ onLinearLayoutClick(btn6) }
+        goNextPage()
     }
-    fun onLinearLayoutClick(linearLayout: LinearLayout, isSelected: Int) {
+    fun onLinearLayoutClick(linearLayout: LinearLayout) {
         val text1 = findViewById<TextView>(R.id.text1)
         val text2 = findViewById<TextView>(R.id.text2)
         val text3 = findViewById<TextView>(R.id.text3)
@@ -43,6 +44,7 @@ class CarSelectActivity : AppCompatActivity() {
         val linearLayout6 = findViewById<LinearLayout>(R.id.LinearLayoutButton6)
         when (linearLayout.id) {
             R.id.LinearLayoutButton1 -> {
+                isSelected = 1
                 text1.setTextColor(Color.parseColor("#C2FF41"))
                 text2.setTextColor(Color.parseColor("#ffffff"))
                 text3.setTextColor(Color.parseColor("#ffffff"))
@@ -145,6 +147,13 @@ class CarSelectActivity : AppCompatActivity() {
             }
         }
 
+    }
+    fun goNextPage(){
+        val button = findViewById<Button>(R.id.nextButton)
+        button.setOnClickListener{
+            val intent = Intent(this, MainBoardActivity::class.java)
+            startActivity(intent)
+        }
     }
 
 

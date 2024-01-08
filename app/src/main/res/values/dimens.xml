@@ -1,0 +1,4 @@
+<!-- res/values/dimens.xml -->
+<resources>
+    <dimen name="item_margin_bottom">24dp</dimen>
+</resources>
