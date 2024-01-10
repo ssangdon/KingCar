@@ -10,7 +10,9 @@ import android.widget.TextView
 import com.example.test.R
 
 class CarSelectActivity : AppCompatActivity() {
-    private var isSelected:Int = 0;
+    private var selectedBrand:String = ""
+    private var selectedModel:String = "";
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_car_select)
@@ -28,6 +30,7 @@ class CarSelectActivity : AppCompatActivity() {
         btn5.setOnClickListener{ onLinearLayoutClick(btn5) }
         btn6.setOnClickListener{ onLinearLayoutClick(btn6) }
         goNextPage()
+        skipNextPage()
     }
     fun onLinearLayoutClick(linearLayout: LinearLayout) {
         val text1 = findViewById<TextView>(R.id.text1)
@@ -44,7 +47,8 @@ class CarSelectActivity : AppCompatActivity() {
         val linearLayout6 = findViewById<LinearLayout>(R.id.LinearLayoutButton6)
         when (linearLayout.id) {
             R.id.LinearLayoutButton1 -> {
-                isSelected = 1
+                selectedBrand = "hyundai"
+                selectedModel = "그랜져"
                 text1.setTextColor(Color.parseColor("#C2FF41"))
                 text2.setTextColor(Color.parseColor("#ffffff"))
                 text3.setTextColor(Color.parseColor("#ffffff"))
@@ -71,7 +75,6 @@ class CarSelectActivity : AppCompatActivity() {
                 linearLayout4.setBackgroundResource(R.drawable.rounded_corner_box)
                 linearLayout5.setBackgroundResource(R.drawable.rounded_corner_box)
                 linearLayout6.setBackgroundResource(R.drawable.rounded_corner_box)
-
             }
             R.id.LinearLayoutButton3 -> {
                 text1.setTextColor(Color.parseColor("#ffffff"))
@@ -86,7 +89,6 @@ class CarSelectActivity : AppCompatActivity() {
                 linearLayout4.setBackgroundResource(R.drawable.rounded_corner_box)
                 linearLayout5.setBackgroundResource(R.drawable.rounded_corner_box)
                 linearLayout6.setBackgroundResource(R.drawable.rounded_corner_box)
-
             }
             R.id.LinearLayoutButton4 -> {
                 text1.setTextColor(Color.parseColor("#ffffff"))
@@ -131,23 +133,11 @@ class CarSelectActivity : AppCompatActivity() {
                 linearLayout4.setBackgroundResource(R.drawable.rounded_corner_box)
                 linearLayout5.setBackgroundResource(R.drawable.rounded_corner_box)
                 linearLayout6.setBackgroundResource(R.drawable.rounded_corner_box_selected)
-
             }
         }
     }
 
-    fun changeColor(textView: TextView, isClicked: BooleanArray){
 
-        for ((idx,item) in isClicked.withIndex()){
-            if(isClicked[idx]){
-
-
-            }else{
-
-            }
-        }
-
-    }
     fun goNextPage(){
         val button = findViewById<Button>(R.id.nextButton)
         button.setOnClickListener{
@@ -155,6 +145,15 @@ class CarSelectActivity : AppCompatActivity() {
             startActivity(intent)
         }
     }
+    fun skipNextPage(){
+        val button = findViewById<Button>(R.id.skipButton)
+        button.setOnClickListener{
+            val intent = Intent(this, MainBoardActivity::class.java)
+            startActivity(intent)
+        }
+    }
+
+
 
 
 //    linearLayout.setBackgroundResource(R.drawable.rounded_corner_box_selected)

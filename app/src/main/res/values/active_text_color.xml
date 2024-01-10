@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="active_text_color">#ffffff</color> <!-- 활성화된 상태일 때의 텍스트 색상 -->
+</resources>

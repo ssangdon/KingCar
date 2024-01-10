@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="active_icon_color">#ffffff</color> <!-- 활성화된 상태일 때의 아이콘 색상 -->
+</resources>

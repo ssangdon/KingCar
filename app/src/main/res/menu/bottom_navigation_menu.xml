@@ -2,14 +2,13 @@
     <item
         android:id="@+id/home"
         android:enabled="true"
-        android:icon="@drawable/home_active"
+        android:icon="@drawable/search"
         android:title="홈" />
     <item
         android:id="@+id/write"
         android:enabled="true"
         android:icon="@drawable/write_article_button"
         android:title="TODO" />
-
     <item
         android:id="@+id/mypage"
         android:enabled="true"

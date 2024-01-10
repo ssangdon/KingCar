@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="inactive_icon_color">#898F96</color> <!-- 비활성화된 상태일 때의 아이콘 색상 -->
+</resources>

@@ -15,8 +15,27 @@
         android:theme="@style/Theme.Test"
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
-
-
+        <activity
+            android:name="com.example.kingcar.ArticleDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.kingcar.ArticleDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.kingcar.MyPageActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.kingcar.SelectCourseActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.kingcar.WriteArticleActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.kingcar.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.kingcar.RegisterActivity"
+            android:exported="false" />
         <activity
             android:name="com.example.kingcar.MainBoardActivity"
             android:exported="false" />
@@ -24,10 +43,7 @@
             android:name="com.example.kingcar.CarSelectActivity"
             android:exported="false" />
         <activity
-            android:name=".activity_car_select"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
+            android:name="com.example.kingcar.FirstPageActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

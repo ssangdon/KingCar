@@ -17,8 +17,7 @@
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        app:layout_constraintTop_toTopOf="parent"/>
     <LinearLayout
         android:id="@+id/LinearLayout1"
         android:layout_width="match_parent"
@@ -192,20 +191,29 @@
         android:layout_marginTop="20dp"
         android:orientation="horizontal">
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/skipButton"
-            style="@style/Widget.Material3.Button.ElevatedButton"
             android:layout_width="150dp"
             android:layout_height="56dp"
+            android:backgroundTint="@color/gray90"
+            android:textSize="18sp"
+            android:textColor="@color/gray30"
             android:layout_marginRight="10dp"
+            app:strokeColor="@color/gray30"
+            app:strokeWidth="1dp"
+            app:cornerRadius="8dp"
             android:text="건너뛰기" />
 
-        <Button
-            style="@style/Widget.Material3.Button.ElevatedButton"
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/nextButton"
             android:layout_width="150dp"
             android:layout_height="56dp"
             android:layout_marginLeft="10dp"
+
+            android:textSize="18sp"
+            android:backgroundTint="@color/main"
+            android:textColor="@color/black"
+            app:cornerRadius="8dp"
             android:text="@string/next"
             />
     </LinearLayout>

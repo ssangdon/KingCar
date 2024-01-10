@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context="com.example.kingcar.RegisterActivity">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -15,8 +15,9 @@
             android:text="@string/nickname_placeholder"
             android:textSize="24sp"
             android:layout_marginTop="108dp"
-            android:layout_marginLeft="24dp"
-            android:textColor="@color/gray50"
+            android:layout_marginLeft="20dp"
+            android:layout_gravity="start"
+            android:textColor="@color/white"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -25,10 +26,12 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/nickNameTextLayout"
-            android:layout_width="320dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             android:layout_marginTop="24dp"
-            android:layout_marginLeft="24dp"
+            android:layout_gravity="center"
             app:boxStrokeColor="@color/gray80"
             app:boxBackgroundColor="@color/gray80"
             app:hintEnabled="false"
@@ -49,17 +52,20 @@
                 />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             style="@style/Widget.Material3.Button.ElevatedButton"
             android:id="@+id/nextButton"
-            android:layout_width="320dp"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
             android:layout_height="56dp"
             android:backgroundTint="@color/gray50"
             android:textColor="@color/gray90"
-            android:layout_marginLeft="24dp"
             android:layout_marginTop="150dp"
+            android:layout_gravity="center"
             android:textSize="18sp"
             android:text="@string/next"
+            app:cornerRadius="8dp"
             android:enabled="false"
             />
     </LinearLayout>
